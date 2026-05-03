@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:tx="http://www.springframework.org/schema/tx"
+xmlns:context="http://www.springframework.org/schema/context"
+xsi:schemaLocation="
+http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+http://www.springframework.org/schema/tx
+http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+
+<!-- Couche DAO -->
+<bean id="ProduitDAO" class="dao.ProduitDAOImpl"/>
+<bean id="UserDAO" class="dao.UserDAOImpl"/>
+
+<!-- Couche Service -->
+ <!-- Injection par constructeur -->
+<bean id="ProduitService" class="services.ProduitServiceImpl">
+    <constructor-arg index="0" ref="ProduitDAO" />
+</bean>
+<bean id="UserServices" class="services.UserServiceImpl">
+    <constructor-arg index="0" ref="UserDAO" />
+</bean>
+
+</beans>
