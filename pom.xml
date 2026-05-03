@@ -3,22 +3,17 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
-
     <groupId>com.example</groupId>
     <artifactId>tp6</artifactId>
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
-
     <name>tp6</name>
-
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <spring.version>5.3.34</spring.version>
     </properties>
-
     <dependencies>
-
         <!-- TEST -->
         <dependency>
             <groupId>junit</groupId>
@@ -26,28 +21,24 @@
             <version>4.13.2</version>
             <scope>test</scope>
         </dependency>
-
         <!-- HIBERNATE -->
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
             <version>5.6.15.Final</version>
         </dependency>
-
         <!-- MYSQL -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.33</version>
         </dependency>
-
         <!-- JSTL -->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>jstl</artifactId>
             <version>1.2</version>
         </dependency>
-
         <!-- SERVLET API (TOMCAT 9 = javax) -->
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -55,7 +46,6 @@
             <version>4.0.1</version>
             <scope>provided</scope>
         </dependency>
-
         <!-- SPRING (IMPORTANT: 5.x not 7.x) -->
         <dependency>
             <groupId>org.springframework</groupId>
@@ -86,11 +76,8 @@
             <artifactId>spring-webmvc</artifactId>
             <version>${spring.version}</version>
         </dependency>
-
     </dependencies>
-
     <build>
         <finalName>tp6</finalName>
     </build>
-
 </project>

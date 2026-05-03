@@ -38,19 +38,15 @@ public class Produit {
     public void setPrix(Double prix){
         this.prix = prix;
     }
-
     public Long getId() {
         return id;
     }
-
     public String getNom() {
         return nom;
     }
-
     public String getDescription() {
         return description;
     }
-
     public Double getPrix() {
         return prix;
     }
